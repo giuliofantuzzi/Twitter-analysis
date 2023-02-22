@@ -11,7 +11,5 @@ eng_tweet<- function(data){
     followers<- data$followers_count
     #replies non sono dati disponibili! (sennò avrei sommato anche quelli)
     rate<- ((likes+retweets)/followers) *100
-    #NB: non mi interessa ordinare, tanto questa sarà la mia variabile risposta
     return(rate)
 }
-#ATTENZIONE: nella formula a denominatore c'è numero follower, però ci son dei dati in cui n° follower =0
