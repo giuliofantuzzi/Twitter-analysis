@@ -12,7 +12,7 @@ for (i in 1: dim(data)[2]){
     missing_values[i]= sum(is.na(data[,i]))
     empty_values[i]= sum(data[,i] =="", na.rm=T)
 }
-missing_values!=0 && empty_values!=0
+any(missing_values!=0 & empty_values!=0)
 #0, allora 
 barplot(missing_values~colnames(data), horiz=F, xlab="", ylab="",las=1, cex.names=0.7, col=3,
         main= "N.A./ Missing values")
